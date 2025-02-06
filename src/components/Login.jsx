@@ -50,8 +50,12 @@ const Login = () => {
     const Navigate = useNavigate();
 
     const clickRegister = () => {
-        Navigate('/Register')
-    }
+        Navigate('/register');
+    };
+
+    const ClickRest = () => {
+        Navigate('/resetPassword'); 
+    };
     ////////////////////////////////////////
 
     return (
@@ -104,7 +108,7 @@ const Login = () => {
                 <button className='btn flex justify-center gap-2 items-center'><FcGoogle className='text-[25px]' /> Continue With Google</button>
                 <div className='text-center m-3 '> Don't have a accout? <u className='cursor-pointer' onClick={clickRegister}>Register</u></div>
                 <button className='h-[50px] w-full  m-2 bg-gray-200 '>
-                    Forgot your password? <span className='cursor-pointer'>Reset it</span></button>
+                    Forgot your password? <span className='cursor-pointer'onClick={ClickRest}><u>Reset it</u></span></button>
             </div>
         </div>
     );
